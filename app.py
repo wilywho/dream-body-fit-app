@@ -163,6 +163,7 @@ with st.form("fitness_form"):
     fatPercentageNow = st.number_input("Fat Percentage Sekarang (%):", min_value=1.0, max_value=60.0, value=20.0)
     targetFatPercentage = st.number_input("Target Fat Percentage Impian (%):", min_value=1.0, max_value=60.0, value=15.0)
 
+    # 👇 tombol submit HARUS berada di dalam blok with st.form()
     submit = st.form_submit_button("Lihat Rekomendasi 💪")
 
 if submit:
@@ -188,3 +189,4 @@ if submit:
         st.write(f"Intake (masuk): {hasil['kalori_intake']} kkal")
         st.write(f"Outtake (keluar): {hasil['kalori_outtake']} kkal")
         st.write(f"Defisit kalori: **{defisit} kkal**")
+
