@@ -158,10 +158,10 @@ with st.form("fitness_form"):
     nameIn = st.text_input("Nama Lengkap:")
     genderIn = st.selectbox("Jenis Kelamin:", ["Pria", "Wanita"])
     ageIn = st.number_input("Usia (tahun):", min_value=10, max_value=100, value=25)
-    heightIn = st.number_input("Tinggi Badan (cm):", min_value=100, max_value=250, value=170)
-    weightIn = st.number_input("Berat Badan (kg):", min_value=30, max_value=200, value=65)
-    fatPercentageNow = st.number_input("Fat Percentage Sekarang (%):", min_value=1.0, max_value=60.0, value=20.0)
-    targetFatPercentage = st.number_input("Target Fat Percentage Impian (%):", min_value=1.0, max_value=60.0, value=15.0)
+    heightIn = st.number_input("Tinggi Badan (cm):", min_value=100, max_value=250)
+    weightIn = st.number_input("Berat Badan (kg):", min_value=30, max_value=200)
+    fatPercentageNow = st.number_input("Fat Percentage Sekarang (%):", min_value=1.0, max_value=60.0)
+    targetFatPercentage = st.number_input("Target Fat Percentage Impian (%):", min_value=1.0, max_value=60.0)
 
     # 👇 tombol submit HARUS berada di dalam blok with st.form()
     submit = st.form_submit_button("Lihat Rekomendasi 💪")
@@ -189,5 +189,6 @@ if submit:
         st.write(f"Intake (masuk): {hasil['kalori_intake']} kkal")
         st.write(f"Outtake (keluar): {hasil['kalori_outtake']} kkal")
         st.write(f"Defisit kalori: **{defisit} kkal**")
+
 
 
